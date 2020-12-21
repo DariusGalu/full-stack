@@ -1,1 +1,51 @@
+.icon{
+    width: 20px;
+}
 
+.logo{
+    margin-left: 330px;
+    width: 75px;
+    height: 75px;
+    border-radius: 80%;
+    object-fit: cover;
+}
+
+.nav-link{
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.navbar-nav{
+    padding-left: 440px;
+}
+
+@media screen and (max-width:1300px) {
+    .navbar-nav{
+        padding-left: 350px;
+    }
+
+   
+    .logo{
+        margin-left: 1px;
+        width: 75px;
+        height: 75px;
+        border-radius: 80%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .navbar-nav{
+        padding-left:10px;
+    }
+    .logo{
+        margin-left: 1px;
+        width: 75px;
+        height: 75px;
+        border-radius: 80%;
+        object-fit: cover;
+    }
+    .navbar-expand-lg{
+        padding-right: 13px;
+    }
+}
