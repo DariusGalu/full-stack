@@ -10,13 +10,15 @@ function App() {
   return (
     <Router>
     <div className="App">
-   <ul>
-     <li><Link to= "/form">Form</Link> </li>
-     <li><Link to= "/login">Login</Link></li>
-     <li><Link to= "/logout">Logout</Link></li>
-     <li><Link to= "/home">Home</Link> </li>
+      <nav>
+        <ul>
+          <li><Link to= "/form">Form</Link> </li>
+          <li><Link to= "/login">Login</Link></li>
+          <li><Link to= "/logout">Logout</Link></li>
+          <li><Link to= "/home">Home</Link> </li>
 
-   </ul>
+        </ul>
+      </nav>
    </div>
    <Route path = "/" exact component={Home}></Route>
    <Route path = "/form" component={Form}></Route>
