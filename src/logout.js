@@ -1,11 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-function logout() {
+
+function Logout() {
+    const [is_loged_in, setIs_loged_in] = useState('');
+    const [newIs_loged_in, setnewIs_loged_in] = useState('');
+
+
+    const onCreate = () => {
+        localStorage.setItem('is_logged_in', "false")
+    };
+
     return (
         <div>
-           <h1>logout</h1> 
+            <Link onClick={onCreate} to= "/home">Log Out</Link>
         </div>
     )
 }
 
-export default logout;
+export default Logout;
