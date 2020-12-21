@@ -12,10 +12,11 @@ import 'bootstrap';
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState('');
 
-  useEffect(() => {
-    setIsLoggedIn(JSON.parse(localStorage.getItem('is_logged_in')))
-    //window.open('/login');
-  },[])
+  // useEffect(() => {
+  //   setIsLoggedIn(JSON.parse(localStorage.getItem('is_logged_in')))
+  //   console.log(JSON.parse(localStorage.getItem('is_logged_in')))
+  //   //window.open('/login');
+  // },[])
   
   return (
     
@@ -44,7 +45,7 @@ function App() {
 
 
    <Route path = "/" exact component={Home}></Route>
-   {isLoggedIn && <Route path = "/form" component={Form}></Route> }
+   <Route path = "/form" component={Form}></Route>
    <Route path = "/login" component={Login}></Route>
    <Route path = "/logout" component={Logout}></Route>
     </Router>

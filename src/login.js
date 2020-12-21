@@ -2,10 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-function Login() {
+function Login(props) {
+    console.log(props);
 
     const onCreate = () => {
-        localStorage.setItem('is_logged_in', "true")
+        localStorage.setItem('is_logged_in', "true");
+        props.history.push('/form')
     };
 
   

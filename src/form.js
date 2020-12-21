@@ -2,13 +2,20 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './form.css';    
 
-function Form() {
+function Form(props) {
+    const isLoggedIn = localStorage.getItem('is_logged_in');
+    if (!isLoggedIn) {
+        props.history.push('/login');
+    }
+    console.log(typeof isLoggedIn);
+    console.log(props);
+    console.log(!isLoggedIn)
 
     const [newEmail, setNewEmail] = useState([]);
     const [date, setDate] = useState(null);
 
     const onCreate = () => {
-        
+
         setLocalStorageValue('email', newEmail)
         setLocalStorageValue('date', date)
     };
